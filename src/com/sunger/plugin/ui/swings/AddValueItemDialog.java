@@ -1,10 +1,9 @@
 package com.sunger.plugin.ui.swings;
 
 import com.sunger.plugin.entity.RowEntity;
-import org.apache.batik.ext.swing.DoubleDocument;
+import com.sunger.plugin.ui.control.DoubleDocument;
 
 import javax.swing.*;
-import javax.swing.text.PlainDocument;
 import java.awt.event.KeyEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -22,7 +21,6 @@ public class AddValueItemDialog extends JDialog {
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
         this.callBack = callBack;
-        nameTextField.setDocument(new PlainDocument());
         rateTextField.setDocument(new DoubleDocument());
         buttonOK.addActionListener(e -> onOK());
 
